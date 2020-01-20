@@ -9,6 +9,10 @@ class Post(models.Model):
     subtitle = models.CharField(max_length=255, null=True, blank=True)
     content = models.TextField()
 
+    class Meta:
+        verbose_name = 'Artigo'
+        #verboso_name_plural = 'Artigos'
+
 
 class Categoria(models.Model):
     title = models.CharField(max_length=255)
