@@ -15,7 +15,7 @@ class Lead(models.Model):
     nome = models.CharField(max_length=255, verbose_name='Nome')
     email = models.CharField(max_length=255, verbose_name='Email')
     tipo = models.ForeignKey(Tipo, on_delete=models.PROTECT, verbose_name='Tipo')
-    vidas = models.IntegerField(max_length=9999, verbose_name='Quantidade de vida')
+    vidas = models.IntegerField(verbose_name='Quantidade de vida')
 
     class Meta:
         verbose_name = 'Lead'

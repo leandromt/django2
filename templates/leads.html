@@ -1,0 +1,2276 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="csrf-token" content="gJn9fHfNBrGRpLcGVU0hcRlyJi5rurKGHM0Mi34U">
+  <meta name="theme-color" content="#0a223f" />
+  <link rel="apple-touch-icon" href="https://app.leadmark.com.br/public/themes/now/img/apple-touch-icon.png">
+  <link rel="shortcut icon" href="https://app.leadmark.com.br/public/themes/now/img/apple-touch-icon.png" type="image/png">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>LeadMark - BETA - Meu Painel</title>
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+
+
+  <!--PWA-->
+  <link rel="manifest" href="https://app.leadmark.com.br/public/manifest.json">
+  <!--PWA-->
+
+
+  <!-- Fonts and icons -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+
+  <link href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" rel="stylesheet" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+  <!-- CSS Files -->
+  <link href="https://app.leadmark.com.br/public/themes/now/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://app.leadmark.com.br/public/themes/now/css/now-ui-dashboard.css" rel="stylesheet" />
+  <link href="https://app.leadmark.com.br/public/themes/now/css/custom.css" rel="stylesheet" />
+
+
+
+
+<style>
+#sem-leads2 {
+  padding: 20px 0;
+}
+#sem-leads2 h1.title {
+  font-size: 3em;
+}
+#listaLeads .card-body {
+    padding: 0px 0px 0px 5px !important;
+}
+
+.atrib{
+	font-size: 13px;
+	font-weight:400;
+	bottom: 0px;
+	position: absolute;
+}
+
+.campo-lead{
+	min-height:152px;
+}
+
+.descricao{
+	height: 146px;
+}
+.descricao .titulo-atri{
+bottom: 0px;
+position: absolute;
+}
+.etq-destaque {
+  margin: -21px -9px;
+  position: absolute;
+  z-index: 9;
+  width: 77px;
+  height: 77px;
+  margin: -5px -6px;
+  background-size: 100%;
+}
+.etq-premium {
+  background-image: url('https://app.leadmark.com.br/public/themes/now/img/etiqueta-premium.png');
+}
+ul#filtros-aplicado {
+    display: inline-block;
+    padding: 10px 0px;
+}
+ul#filtros-aplicado li {
+    display: inline-block;
+    list-style: none;
+    line-height: 2;
+    margin: 0 4px;
+}
+ul#filtros-aplicado li .btn-sm {
+    margin: 5px 1px;
+}
+ul#filtros-aplicado li span {
+  font-size:11px;
+}
+
+
+.wrapper {
+
+    height: auto !important;
+}
+
+#container_filtro{
+  overflow: auto;
+
+}
+
+#filtro_ddd, #filtro_operadora {
+  padding-left: 0px;
+}
+.veja_mais_op{
+  height: 238px !important;
+    overflow:hidden !important;
+}
+.veja_mais_op_open{
+  height: auto !important;
+    overflow:hidden !important;
+}
+.veja_mais_ddd{
+  height: 238px !important;
+    overflow:hidden !important;
+}
+.veja_mais_ddd_open{
+  height: auto !important;
+    overflow:hidden !important;
+}
+
+.atri{
+  border: solid 1px #087761;
+    float: left;
+    margin: 1px;
+    border-radius: 4px;
+    padding: 1px 5px;
+}
+
+#atributos-lead a{
+  padding: 6px 10px;
+  margin:2px 1px;
+  color:#087761;
+  border:#087761 1px solid;
+  font-size: 12px;
+}
+#atributos-lead a:hover{
+  background-color:#087761;
+  color:#fff;
+}
+.reset-button, .reset-select {
+  background: none;
+  border: none;
+  padding: 0 3px;
+  margin: 0;
+  cursor: pointer;
+}
+#modalFilter .modal-dialog {
+    max-width: 100%;
+    margin:0px;
+}
+#modalFilter{
+    background-color:#fff;
+}
+#modalFilter .modal-content {
+    border-radius: 0px;
+    border: none;
+    box-shadow: none;
+    min-height: 100%;
+}
+#modalFilter .modal-content .modal-header .title {
+    color: #444 !important;
+}
+#svgLoader { padding: 50px 0; }
+#svgLoader img { width: 75px; margin: 0 auto; display: block; }
+.item-lead { background-color: #fff; border-radius: 4px; padding: 3px 3px; margin-bottom: 2.2em; overflow: hidden; -webkit-transition: all 300ms ease-in-out; -moz-transition: all 300ms ease-in-out; -o-transition: all 300ms ease-in-out; -ms-transition: all 300ms ease-in-out; transition: all 300ms ease-in-out; }
+
+.item-lead:hover{
+  background-color:#efefef;
+}
+a .item-lead{
+  color:#444;
+}
+.lead-conteudo { position: relative; height: 136px; }
+.l-tempo { font-size: .8em;  }
+.comprarLead { font-weight: bold; position: absolute; bottom: 0; margin: 0; }
+h3.title { font-weight: normal; margin-bottom: .75rem; }
+.lista:hover {
+  background: #fff;
+  border-radius: 16px;
+}
+.panel-header-sm {
+  height: 0px;
+  padding-top: 80px;
+  padding-bottom: 0px;
+}
+.modal-content .modal-header {
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+}
+.modal-content .modal-header button {
+  top: 17px !important;
+}
+.card-pricing ul li {
+  padding: 10px 0;
+}
+.card-pricing .card-icon.icon-primary i {
+  box-shadow: none;
+  color: #12866f;
+  border: solid;
+}
+.modal-content .modal-header {
+  border-bottom: none;
+  padding-top: 24px;
+  padding-right: 24px;
+  padding-bottom: 24px;
+  padding-left: 24px;
+}
+.modal-content .modal-header .title {
+  color: #FFF;
+}
+.modal .modal-header .close {
+  color: #FFF;
+  text-shadow: none;
+}
+#myModalFilter .form-check-inline .form-check-input {
+  position: static;
+  margin-top: 0;
+  margin-right: 1px;
+  margin-left: 0;
+  width: 1px;
+}
+#myModalFilter .form-check .form-check-sign::before,
+#myModalFilter .form-check .form-check-sign::after {
+  width: 23px;
+  height: 23px;
+}
+#myModalFilter .form-check .form-check-sign::after {
+  color: #FFF;
+  background-color: #28a745;
+}
+#myModalFilter .form-check-radio input[type="radio"] {
+  width: 0px;
+}
+#myModalFilter .form-check-radio input[type="radio"]:checked+.form-check-sign::after {
+  width: 19px;
+  height: 19px;
+  background-color: #28a745;
+  border-color: #28a745;
+  top: 5px;
+  left: 5px;
+  opacity: 1;
+}
+.preco {
+  color: #444;
+  font-weight: 600 !important;
+  font-size: 20px;
+}
+.sem-leads h1 {
+  color: #1b3a5e;
+  font-size: 600%;
+}
+
+@media (max-width: 768px) {
+  .lead-conteudo { height: 168px; }
+  .select-meus-filtros {
+    max-width: 153px;
+  }
+}
+
+@media (max-width: 600px) {
+
+}
+
+@media (max-width: 576px) {
+
+  a {
+    font-size: 12px;
+}
+
+#listaLeads .card .card-body {
+    padding: 0px 0px 0px 10px!important;
+}
+
+ .campo-lead {
+    padding-left:0px !important;
+}
+ .atrib{
+	font-size: 12px;
+	font-weight:400;
+	bottom: 0px;
+	position: absolute;
+}
+
+ .item-leads{
+	padding-left:0px !important;
+	padding-right:0px !important;
+
+}
+
+.img-leads{
+	padding-left:8px !important;
+}
+ .descricao{
+	height: auto;
+
+}
+
+.descricao .titulo-atri{
+	bottom: 0px;
+    position: inherit;
+}
+
+ .etq-destaque{
+  width:87px;
+  height: 87px;
+  /* margin: -20px -23px; */
+}
+
+ .container_filtro_open{
+left:0px !important;
+}
+
+ #container_filtro{
+  position: fixed;
+    top: 0px;
+    background: #099;
+    z-index: 9999;
+    overflow: auto;
+    width: 84%;
+  left:-84%;
+    color: #fff!important;
+   -webkit-transition: all .2s linear 0s;
+    transition: all .2s linear 0s;
+  display: block;
+    height: 100%;
+}
+#container_filtro strong, #container_filtro span, #container_filtro a, #container_filtro li{
+
+    color: #fff!important;
+    font-size: 12px!important;
+}
+
+  p.l-tempo.d-md-none { padding: 20px 0; text-align: center; }
+
+  #svgLoader { padding: 50px 0 100px; }
+  .comprarLead { position: relative; padding: 10px!important; }
+
+}
+
+@media  screen and (max-width: 320px){
+  .select-meus-filtros {
+    max-width: 100px;
+  }
+  #txt-leads-encontrados span {
+    font-size: 0.8em;
+  }
+}
+
+
+
+
+</style>
+
+<!-- Global site tag (gtag.js) - Google Ads: 949196845 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-949196845"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-949196845');
+</script>
+<!-- Event snippet for Formulário LP conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-949196845/Q6EBCPvc4YkBEK2wzsQD',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
+
+
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '333037897055018');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=333037897055018&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+
+</head>
+
+<body class=" sidebar-mini ">
+
+  <div class="wrapper ">
+
+    <!-- Sidebar -->
+    <div class="sidebar" data-color="verde">
+
+  <div class="logo">
+    <a href="https://app.leadmark.com.br/painel" class="simple-text logo-mini">
+      <img src="https://app.leadmark.com.br/public/themes/now/img/apple-touch-icon.png" alt="Logo LeadMark">
+    </a>
+    <a href="https://app.leadmark.com.br/painel" class="simple-text logo-normal">
+      LeadMark
+    </a>
+    <div class="navbar-minimize">
+      <button id="minimizeSidebar" class="btn btn-simple btn-icon btn-neutral btn-round">
+        <i class="now-ui-icons text_align-center visible-on-sidebar-regular"></i>
+        <i class="now-ui-icons design_bullet-list-67 visible-on-sidebar-mini"></i>
+      </button>
+    </div>
+  </div>
+  <div class="sidebar-wrapper">
+    <div class="user">
+      <div class="photo" style="border-radius:4px; height: auto;">
+                  <img src="https://app.leadmark.com.br/public/uploads/imagens/1560276672.jpg" />
+              </div>
+      <div class="info">
+        <a data-toggle="collapse" href="#collapseExample" class="collapsed">
+          <span>
+            <span id="nomeUser">Leandro Tavares</span>
+            <b class="caret"></b>
+          </span>
+        </a>
+        <div class="clearfix"></div>
+        <div class="collapse" id="collapseExample">
+          <ul class="nav">
+            <li>
+              <a href="https://app.leadmark.com.br/painel/minhasleads">
+               <i class="now-ui-icons files_single-copy-04"></i>
+                <span class="sidebar-normal">Minhas Leads</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://app.leadmark.com.br/painel/extrato">
+                <i class="now-ui-icons text_align-left"></i>
+                <span class="sidebar-normal">Extrato de transações</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://app.leadmark.com.br/painel/pagamentos">
+                <i class="now-ui-icons shopping_credit-card"></i>
+                <span class="sidebar-normal">Ultimos pagamentos</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://app.leadmark.com.br/painel/perfil">
+               <i class="now-ui-icons users_single-02"></i>
+                <span class="sidebar-normal">Meu Perfil</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://app.leadmark.com.br/coligada">
+               <i class="now-ui-icons arrows-1_refresh-69"></i>
+                <span class="sidebar-normal">Alterar coligada</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://app.leadmark.com.br/logout" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+               <i class="now-ui-icons media-1_button-power"></i>
+                <span class="sidebar-normal">Sair</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <ul class="nav">
+
+      <li>
+        <a href="https://app.leadmark.com.br/painel">
+          <i class="now-ui-icons tech_tv"></i>
+          <p>Leads</p>
+        </a>
+      </li>
+      <li>
+        <a href="https://app.leadmark.com.br/painel/minhasleads">
+          <i class="now-ui-icons files_single-copy-04"></i>
+          <p>Minhas Leads</p>
+        </a>
+      </li>
+      <li>
+        <a href="https://app.leadmark.com.br/painel/creditar">
+          <i class="now-ui-icons business_money-coins"></i>
+          <p>Adicionar Crédito</p>
+        </a>
+      </li>
+     <!-- <li>
+        <a data-toggle="modal" data-target="#desenvolvimento" href="#">
+          <i class="fas fa-shopping-cart"></i>
+          <p>LeadMark Pay</p>
+        </a>
+      </li>
+      <li>
+        <a data-toggle="modal" data-target="#desenvolvimento" class="desenvolvimento" href="#">
+          <i class="fas fa-calculator"></i>
+          <p>Multicálculo</p>
+        </a>
+      </li>-->
+
+
+      <li>
+        <a data-toggle="collapse" href="#menuAdmin">
+          <i class="now-ui-icons ui-1_settings-gear-63"></i>
+          <p>
+            Configurações
+            <b class="caret"></b>
+          </p>
+        </a>
+        <div class="collapse" id="menuAdmin">
+          <ul class="nav">
+            <li>
+              <a data-toggle="collapse" href="#linkvinculos">
+                <i class="fas fa-users"></i>
+                <p>Vínculos e Vendedores <b class="caret"></b></p>
+              </a>
+              <div class="collapse" id="linkvinculos">
+                <ul class="nav">
+                  <li>
+                    <a href="https://app.leadmark.com.br/painel/vinculo">
+                      <span class="sidebar-mini-icon">VI</span>
+                      <p>Vincular-se</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://app.leadmark.com.br/painel/vinculos">
+                      <span class="sidebar-mini-icon">MV</span>
+                      <p>Meus Vínculos</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://app.leadmark.com.br/painel/vendedores">
+                      <span class="sidebar-mini-icon">VE</span>
+                      <p>Meus Vendedores</p>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a data-toggle="collapse" href="#menuCargosEquipes">
+                <i class="fas fa-users-cog"></i>
+                <p>Cargos e Equipes <b class="caret"></b></p>
+              </a>
+              <div class="collapse" id="menuCargosEquipes">
+                <ul class="nav">
+                  <li>
+                    <a href="https://app.leadmark.com.br/painel/equipe/cargo">
+                      <span class="sidebar-mini-icon">GC</span>
+                      <span class="sidebar-normal">Gerenciar Cargos</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://app.leadmark.com.br/painel/equipes">
+                      <span class="sidebar-mini-icon">GE</span>
+                      <span class="sidebar-normal">Gerenciar Equipes</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+      		  <li>
+              <a data-toggle="collapse" href="#menuRegras">
+                <i class="fas fa-random"></i>
+                <p>Regras <b class="caret"></b></p>
+              </a>
+              <div class="collapse" id="menuRegras">
+                <ul class="nav">
+
+                  <li>
+                    <a href="https://app.leadmark.com.br/painel/regras">
+                      <span class="sidebar-mini-icon">DL</span>
+                      <span class="sidebar-normal">Distribuição de Leads</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://app.leadmark.com.br/painel/regrascreditos">
+                      <span class="sidebar-mini-icon">DC</span>
+                      <span class="sidebar-normal">Distribuição de Crédito</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://app.leadmark.com.br/painel/estorno">
+                      <span class="sidebar-mini-icon">EC</span>
+                      <span class="sidebar-normal">Estorno de Crédito</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://app.leadmark.com.br/painel/regrascompra">
+                      <span class="sidebar-mini-icon">CL</span>
+                      <span class="sidebar-normal">Compra de Lead</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+                        <li>
+              <a href="https://app.leadmark.com.br/admin/reposicoes">
+                <span class="sidebar-mini-icon"><i class="fas fa-undo"></i></span>
+                <span class="sidebar-normal">Reposições</span>
+              </a>
+            </li>
+                                    <li>
+              <a href="https://app.leadmark.com.br/painel/admin/leads">
+                <span class="sidebar-mini-icon"><i class="fas fa-lg fa-hand-holding-usd"></i></span>
+                <span class="sidebar-normal">Precificar Lead</span>
+              </a>
+            </li>
+                      </ul>
+        </div>
+      </li>
+
+
+
+
+
+            <li>
+        <a data-toggle="collapse" href="#menuAdmin2">
+            <i class="now-ui-icons ui-2_settings-90"></i>
+            <p>
+            Administração
+            <b class="caret"></b>
+            </p>
+        </a>
+        <div class="collapse" id="menuAdmin2">
+            <ul class="nav">
+            <li>
+                <a data-toggle="collapse" href="#perfis-permissoes">
+                <i class="fas fa-user-lock"></i>
+                <p>Perfis e Permissões<b class="caret"></b></p>
+                </a>
+                <div class="collapse" id="perfis-permissoes">
+                <ul class="nav">
+                    <li>
+                    <a href="https://app.leadmark.com.br/gerenciar/perfis">
+                        <span class="sidebar-mini-icon">PF</span>
+                        <p>Gerenciar Perfis</p>
+                    </a>
+                    </li>
+                    <li>
+                    <a href="https://app.leadmark.com.br/gerenciar/permissoes">
+                        <span class="sidebar-mini-icon">PM</span>
+                        <p>Gerenciar Permissões</p>
+                    </a>
+                    </li>
+                </ul>
+                </div>
+            </li>
+            <li>
+                <a href="https://app.leadmark.com.br/gerenciar/usuarios">
+                    <i class="fas fa-users"></i>
+                    <p>Gerenciar Usuários</p>
+                </a>
+            </li>
+            </ul>
+        </div>
+        </li>
+
+
+
+
+
+
+      <li>
+        <a >
+          <i class="far fa-bell"></i>
+          <p class="js-push-btn">Ativar Notificação</p>
+        </a>
+      </li>
+
+
+      <li>
+        <a href="https://api.whatsapp.com/send?phone=5511965705732&text=Olá%20Poderia%20me%20ajudar?" target="_blank">
+        <i class="fab fa-lg fa-whatsapp"></i>
+          <p>Fale conosco</p>
+        </a>
+      </li>
+            <li>
+        <a href="https://app.leadmark.com.br/painel/relatoriogeral">
+          <i class="now-ui-icons files_single-copy-04"></i>
+          <p>Relatório geral</p>
+        </a>
+      </li>
+
+
+
+    </ul>
+  </div>
+</div>
+<div class="modal fade modal-mini modal-primary" id="desenvolvimento" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header justify-content-center">
+                            <div class="modal-profile">
+                             <i class="fas fa-laptop-code"></i>
+                            </div>
+                          </div>
+                          <div class="modal-body text-center">
+                            <h4 class="my-0">Estamos em desenvolvimento!</h4>
+
+                          </div>
+                          <div class="modal-footer text-center">
+
+                            <button type="button" class="btn btn-link btn-neutral" data-dismiss="modal">Sair</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+
+
+
+
+
+
+    <div class="main-panel">
+
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-transparent  navbar-absolute bg-primary ">
+  <div class="container-fluid">
+    <div class="navbar-wrapper">
+      <div class="navbar-toggle">
+        <button type="button" class="navbar-toggler">
+          <span class="navbar-toggler-bar bar1"></span>
+          <span class="navbar-toggler-bar bar2"></span>
+          <span class="navbar-toggler-bar bar3"></span>
+        </button>
+      </div>
+     <img style="width:80px;width: 67px;margin-right: 13px;" src="https://app.leadmark.com.br/public/themes/now/img/tag-beta.png" class="mt-2">
+      <a class="navbar-brand" href="https://app.leadmark.com.br/painel">Meu Painel</a><br>
+
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-bar navbar-kebab"></span>
+      <span class="navbar-toggler-bar navbar-kebab"></span>
+      <span class="navbar-toggler-bar navbar-kebab"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navigation">
+
+
+      <form class="d-none">
+        <div class="input-group no-border">
+          <input  type="text" value="" class="form-control" placeholder="Pesquisar...">
+          <div class="input-group-append">
+            <div data-toggle="modal" data-target="#Modalpesquisar" class="input-group-text">
+              <i class="now-ui-icons ui-1_zoom-bold"></i>
+            </div>
+          </div>
+        </div>
+      </form>
+
+
+
+
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#" data-toggle="modal" data-target="#Modalpesquisar"><i class="now-ui-icons ui-1_zoom-bold"></i> Pesquisar</a></span>
+        </li>
+
+                <li class="nav-item">
+          <a class="nav-link" href="https://app.leadmark.com.br/painel/creditar">
+            Meu saldo:
+            <strong style="font-size:18px;">R$
+                        52,20
+                        </strong>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link dropdown-toggle" href="#" id="topoMenuPerfil" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="now-ui-icons users_single-02"></i>
+            <p>
+              <span class="d-lg-none d-md-block">Minha conta</span>
+            </p>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="topoMenuPerfil">
+            <span class="dropdown-item">Meu ID: <strong>2</strong></span>
+            <a class="dropdown-item" href="https://app.leadmark.com.br/painel/creditar">Adicionar Crédito</a>
+            <a class="dropdown-item" href="https://app.leadmark.com.br/painel">Comprar Leads</a>
+            <a class="dropdown-item" href="https://app.leadmark.com.br/painel/minhasleads">Minhas Leads</a>
+            <a class="dropdown-item" href="https://app.leadmark.com.br/painel/extrato">Extrato de transações</a>
+            <a class="dropdown-item" href="https://app.leadmark.com.br/painel/pagamentos">Últimos pagamentos</a>
+            <a class="dropdown-item" href="https://app.leadmark.com.br/painel/perfil">Meu Perfil</a>
+            <a class="dropdown-item" href="https://app.leadmark.com.br/logout" onclick="event.preventDefault();document.getElementById('logout-form').submit();">Sair</a>
+            <form id="logout-form" action="https://app.leadmark.com.br/logout" method="POST" style="display: none;">
+                <input type="hidden" name="_token" value="gJn9fHfNBrGRpLcGVU0hcRlyJi5rurKGHM0Mi34U">            </form>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+      <!-- End Navbar -->
+      <div class="panel-header panel-header-sm">
+      </div>
+
+      <!-- Conteudo -->
+      <div class="content">
+
+<!-- BOTOES -->
+<div class="row">
+
+<div class="col-md-12 text-right px-1">
+
+    <a class="btn btn-round btn-icon btn-info " onclick="recarregarLeads()"> <i class="fas fa-sync-alt" style="color:#fff;"></i> </a>
+    <button style="position: sticky; top: 0px;" class="nav-toggler btn btn-round btn-warning "> <i class="fas fa-filter"></i> Filtro</button>
+  </div>
+</div>
+<!-- /BOTOES -->
+
+
+
+<!-- CONTEUDO -->
+<div class="row" style="
+    margin-top: -5px;
+">
+  <div id="container_filtro" class="col-md-3 col-12">
+    <div class="container" style="overflow: auto; position: relative;">
+
+    <div class="row d-md-none">
+        <div class="col-10 my-auto pt-3 text-left">
+          <h5><i class="far fa-address-book"></i> Filtros</h5>
+        </div>
+        <div class="col-2 ml-auto my-auto text-center">
+          <i style="cursor:pointer;" class="nav-toggler fas fa-lg fa-arrow-left"></i>
+        </div>
+    </div>
+    <div id="accordion-filtro" role="tablist" aria-multiselectable="true" class="card-collapse">
+      <div class="card card-plain">
+        <div class="card-header" role="tab" id="segmento-filtro"> <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#segmento-filtro-accordion" aria-expanded="false" aria-controls="collapseTwo"> <strong>Segmento</strong> <i class="now-ui-icons arrows-1_minimal-down"></i> </a> </div>
+        <div id="segmento-filtro-accordion" class="collapse" role="tabpanel" aria-labelledby="segmento-filtro">
+          <div class="card-body px-0">
+            <div id="filtro_segmento"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card card-plain">
+        <div class="card-header" role="tab" id="ddd-filtro"> <a data-toggle="collapse" data-parent="#accordion" href="#ddd-filtro-accordion" aria-expanded="true" aria-controls="ddd-filtro-accordion"> <strong>DDD da Operadora</strong> <i class="now-ui-icons arrows-1_minimal-down"></i> </a> </div>
+        <div id="ddd-filtro-accordion" class="collapse show" role="tabpanel" aria-labelledby="tipo-ddd">
+            <div class="botaoddd card-body veja_mais_ddd px-0">
+            <input style="background-color: #fff;" class="form-control" type="text" id="txtBusca" placeholder="Pesquise seu DDD"/>
+            <ul id="filtro_ddd"></ul>
+            </div>
+          <a id="veja_mais_ddd" style="cursor:pointer; text-decoration:none;"><li style="list-style: none; color:#009999;">Ver todos</small></li></a>
+        </div>
+      </div>
+
+
+      <div class="card card-plain">
+        <div class="card-header" role="tab" id="operadora-filtro"> <a data-toggle="collapse" data-parent="#accordion" href="#operadora-filtro-accordion" aria-expanded="true" aria-controls="operadora-filtro-accordion"> <strong>Operadora</strong> <i class="now-ui-icons arrows-1_minimal-down"></i> </a> </div>
+        <div id="operadora-filtro-accordion" class="collapse show" role="tabpanel" aria-labelledby="operadora-filtro">
+          <div class="botaoop card-body veja_mais_op px-0">
+          <input style="background-color: #fff;" class="form-control" type="text" id="txtBuscaop" placeholder="Pesquise sua Operadora"/>
+            <ul id="filtro_operadora"> </ul>
+          </div>
+          <a id="veja_mais_op" style="cursor:pointer; text-decoration:none;"><li style="list-style: none; color:#009999;">Ver todos</small></li></a> </div>
+      </div>
+      <div class="card card-plain">
+        <div class="card-header" role="tab" id="tipo-filtro"> <a data-toggle="collapse" data-parent="#accordion" href="#tipo-filtro-accordion" aria-expanded="true" aria-controls="tipo-filtro-accordion"> <strong>Tipo da Lead</strong> <i class="now-ui-icons arrows-1_minimal-down"></i> </a> </div>
+        <div id="tipo-filtro-accordion" class="collapse show" role="tabpanel" aria-labelledby="tipo-filtro">
+          <div class="card-body px-0">
+            <div id="tipo"> </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!--<div class="card card-plain">
+        <div class="card-header" role="tab" id="preco-filtro"> <a data-toggle="collapse" data-parent="#accordion" href="#preco-filtro-accordion" aria-expanded="true" aria-controls="preco-filtro-accordion"> <strong>Preço</strong> <i class="now-ui-icons arrows-1_minimal-down"></i> </a> </div>
+        <div id="preco-filtro-accordion" class="collapse show" role="tabpanel" aria-labelledby="tipo-preco">
+          <div class="card-body">
+            <div id="filtro_preco">
+              <h6 class="title mt-0" >Preço</h6>
+              <p id="menor_valor_media"></p>
+              <p id="media_maior_valor"></p>
+              <div class="col-sm-12 mx-0 px-0">
+                <div class="row">
+                  <div class="col-md-5 col-5 mx-0 px-1">
+                    <div class="form-group">
+                      <input style="background-color:#FFF;border-radius: 4px;" type="text" class="form-control" placeholder="De">
+                    </div>
+                  </div>
+                  <div class="col-md-5 col-5 mx-0 px-1">
+                    <div class="form-group">
+                      <input style="background-color:#FFF;border-radius: 4px;" type="text" class="form-control" placeholder="Até">
+                    </div>
+                  </div>
+                  <div class="col-md-2 col-2 mx-0 px-1">
+                    <div class="form-group"> <a class="btn btn-primary btn-simple btn-icon my-0" href="#"><i class="now-ui-icons ui-1_send"></i></a> </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>-->
+    </div>
+    </div>
+  </div>
+  <div id="container_leads" class="ml-auto col-md-9 col-12">
+
+    <div class="row">
+      <div id="box-filtro" class="col-lg-8 col-md-12 col-sm-12 col-12 px-2 d-none">
+          <div class="row">
+              <div class="col-12 col-md-12">
+
+
+
+
+
+
+                <div id="container-meus-filtros" class="row">
+                  <div class="col-12 col-md-12 mx-auto">
+                    <span class="text-primary"><i class="fas fa-lg fa-filter"></i></span>
+                    <select class="select-meus-filtros reset-select text-primary" class="mb-0" style="border: solid 1px;
+    border-radius: 30px;
+    padding: 8px 2%;
+    width: 100%;
+    max-width: 194px;"></select>
+                    <div class="btns-opcoes-filtros" style="display:inline">
+                        <button style="background-color: transparent; color: #12866f; border: 1px solid #12866f;" id="deletar-filtro" class="deletar-filtro btn btn-round btn-icon btn-primary d-none" title="Remover filtro"><i class="far fa-trash-alt"></i></button>
+                        <button style="background-color: transparent; color: #12866f; border: 1px solid #12866f;" id="salvar-filtro" class="btn btn-round btn-icon btn-primary  d-none" title="Salvar filtro"><i class="far fa-heart"></i></button>
+                        <button style="background-color: transparent; color: #12866f; border: 1px solid #12866f;" id="ativar-noticicao" class="ativar-noticicao btn btn-round btn-icon btn-primary  d-none" title="Ativar notificações"><i class="far fa-bell"></i></button>
+                        <button style="background-color: transparent; color: #12866f; border: 1px solid #12866f;" id="desativar-noticicao" class="desativar-noticicao btn btn-round btn-icon btn-primary  d-none" title="Desativar notificações"><i class="far fa-bell-slash"></i></button>
+                        <span class="float-right mt-3 d-none d-md-block" style="
+    padding: 5px 1%;
+    border-radius: 8px;
+">Encontrado: <span class="resultados-encontrados-desk
+"></span> Leads</span>
+
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+          </div>
+          <div id="container-filtros-aplicados" class="row d-none">
+            <div class="col-12 col-md-12 mx-auto">
+
+              <ul id="filtros-aplicado" class="mb-0 pt-0">
+                <li id="li-limpar-filtros" class="d-none" style="list-style: none; color:#444; line-height:2;"><a class="limpar-filtros" href="#" style=" text-decoration:none;">limpar todos</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- <a href="#" class="btn btn-round btn-danger btn-block">Black Friday 25% de desconto na Lead</a> -->
+
+      </div>
+    </div>
+
+
+    <div id="lead-teste" class="item-leads">
+    	<div class="row">
+        <div class="col-12 px-2 mb-3 d-block d-md-none">
+            <!-- <img class="promocao d-none" src="https://app.leadmark.com.br/public/themes/now/img/banner-black-mob.png"> -->
+          </div>
+        </div>
+        <div class="row">
+
+
+      <span class="d-block d-md-none text-center mx-auto p mb-1"><span class="resultados-encontrados-mob"></span> Leads</span>
+        	<div id="listaLeads" class="col-lg-8 col-md-12 col-sm-12 col-12 px-2">
+
+                <!-- ITEM LEAD -->
+                <a href="https://app.leadmark.com.br/painel/lead/' + i.id + '"><div class=" card mb-2">'
+                    <div class="card-body px-md-2">
+                        <div class="row py-md-2 px-md-1 px-2 campo-lead">
+                          <div class="col-md-3 col-5 py-md-2 my-auto item-leads img-leads py-1">
+                              <div class="etq-destaque etq-premium"></div>
+                              <img class="img img-raised" src="https://app.leadmark.com.br/public/themes/now/img/operadoras/1.png">
+                          </div>
+                          <div class="col-md-5 col-7 mh-100">
+                              <p style="font-size:18px;" class="mb-0 mt-2">Individual</p>
+                              <p class="mb-0 d-md-block d-block mt-md-0" style="font-size: 13px;font-weight:100; color:#444; text-decoration:line-through;">R$ 23,00</p>
+                              <p class="mb-0 d-md-block d-block" style="font-size: 17px;font-weight:600; color:#12B160;">R$ 20,00<span class="d-block d-md-none float-right mt-1" style="font-size:12px; color:#444;font-weight:400;"><i class="now-ui-icons ui-2_time-alarm"></i> 25</span></p>
+                              <p class="mb-0 mt-2" style="color:#444; font-size:12px; position:absolute; bottom:5px;">
+                                <i class="far fa-heart"></i>
+                                <i class="far fa-file-alt"></i>
+                                <br><span class="" style="font-size:10px; color:#444">DDD 85 Fortaleza</span>
+                              </p>
+                          </div>
+                          <div class="col-md-4 col-4 text-center d-none d-md-block pr-md-2">
+                              <p class="d-md-none" style="font-size: 17px;font-weight:600;">R$ 18,00</p>
+                              <small class="d-none d-md-block mt-2"><i class="now-ui-icons ui-2_time-alarm"></i> 8 horas</small>
+                              <span class="mt-2 btn btn-primary d-none d-md-block mt-4 mb-0 pr-md-4" style="background: transparent;color: #f78323;border: solid 2px;border-radius: 30px;bottom: 0px;position: absolute;padding: 10px 10px;"><i class="far fa-lg fa-comment"></i> Comprar agora</span>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                </a>
+                <!-- ITEM LEAD -->
+          </div>
+        </div>
+    </div>
+
+     <div class="row d-none">
+      <div class="col-md-4 mx-auto">
+          <a id="carregarleads" style="cursor:pointer; color:#fff !important;" class="btn btn-primary btn-block d-none">Carregar mais <i class="fas fa-chevron-down"></i></a>
+        </div>
+     </div>
+     <div class="row mt-4">
+        <div id="container-paginacao" class="col-md-12 d-none">
+            <nav aria-label="...">
+              <ul id="paginacao" class="pagination justify-content-center">
+              </ul>
+            </nav>
+          </div>
+     </div>
+  </div>
+</div>
+
+
+      </div>
+
+      <!-- Footer -->
+      <footer class="footer">
+  <div class="container-fluid">
+    <nav>
+      <ul>
+        <li>
+          <a href="https://leadmark.com.br/" target="_blank">
+            Sobre nós
+          </a>
+        </li>
+        <li>
+          <a href="https://leadmark.com.br/blog/" target="_blank">
+            Blog
+          </a>
+        </li>
+        <li>
+          <a href="https://leadmark.com.br/perguntas-frequentes/" target="_blank">
+            FAQ
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div class="copyright" id="copyright">
+      &copy; 2020, Desenvolvido por
+      <a href="https://leadmark.com.br/" target="_blank">LeadMark</a>.
+    </div>
+  </div>
+
+
+  <div class="modal fade" id="Modalpesquisar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog mt-5">
+    <div class="modal-content">
+      <div class="modal-header justify-content-center">
+
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"> <i style="color:#444;" class="now-ui-icons ui-1_simple-remove"></i> </button>
+
+
+        <h6 style="color:#444;" class="title title-up">Pesquisar:</h6>
+      </div>
+      <div id="bodyMenu" class="modal-body">
+        	<div class="row">
+            	<div class="col-md-12 mb-3">
+                	<input id="search" name="search" placeholder="Pesquisar" type="text" data-list=".list" class="form-control">
+                </div>
+                <div class="col-md-12">
+                	<style>
+                    	mark {
+
+    background-color: #ffc107;
+    color: #fff;
+    border-radius: 4px;
+    padding: 0px 6px;
+}
+                    </style>
+
+                    <ul class="list">
+
+					</ul>
+                </div>
+            </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+<div class="modal fade" id="Modalnotificação" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog mt-5">
+    <div class="modal-content">
+      <div class="modal-header justify-content-center" style="height: 42px;">
+
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"> <i style="color:#444;" class="now-ui-icons ui-1_simple-remove"></i> </button>
+
+
+
+      </div>
+      <div id="bodyMenu" class="modal-body">
+        	<div class="row">
+            	<div class="col-md-12 mb-3">
+                	<div id="icone" class="text-center">
+
+                    </div>
+
+                    <h4 id="titulo" class="text-center"></h4>
+                    <p id="msg" class="text-center"></p>
+                </div>
+
+            </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+<style>
+#Modaltelefone{
+  padding-right: 0px!important;
+}
+</style>
+<div class="modal fade" id="Modaltelefone" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" style="
+    max-width: 100%;
+    height: 100%;
+    margin: 0px;
+">
+    <div class="modal-content"style="
+    height: 100%;
+">
+      <div class="modal-header justify-content-center" style="height: 42px;">
+
+      </div>
+      <div class="modal-body mx-auto col-md-4">
+        	<div class="row">
+            	<div class="col-md-12 mb-3">
+                    <h4 id="sucesso3" class="text-center">Atualização de Cadastro!</h4>
+
+                    <h4 id="sucesso" class="text-center d-none" style="color:green">Cadastrado com sucesso!</h4>
+                    <div id="sucesso6" class="form-group d-none text-center">
+                        <input data-dismiss="modal" aria-hidden="true" type="button" class="btn btn-fill btn-primary mb-2 " name="atualizar" value="Avançar">
+                      </div>
+
+                    <p id="sucesso2" class="text-center">Leandro Tavares, por favor atualize seu celular para dar
+                      continuidade ao seu processo de compra de leads.</p>
+                      <div id="sucesso4" class="row">
+                          <label class="col-sm-4 col-form-label">Celular</label>
+                          <div class="col-sm-8 px-0">
+                            <div class="form-group">
+                              <input id="telefone" type="text" name="telefone"  class="form-control sp_celphones" maxlength="11" pattern="[0-9]+$"  placeholder="DDD + Telefone"  required>
+                            </div>
+                          </div>
+                          <label class="col-sm-4 col-form-label">WhatsApp?</label>
+                          <div class="col-sm-6 px-0">
+                            <div class="form-check form-check-radio float-left pl-0" style="float: left;">
+                              <label class="form-check-label ">
+                                <input  class="form-check-input" type="radio" name="whatsapp" id="telefone_tem_whatsapp" value="1" required="">
+                                <span class="form-check-sign"></span>
+                                Sim
+                              </label>
+                            </div>
+                            <div class="form-check form-check-radio float-left" style="float: left;">
+                              <label class="form-check-label">
+                                <input  class="form-check-input" type="radio" name="whatsapp" id="telefone_nao_tem_whatsapp" value="0" required="">
+                                <span class="form-check-sign"></span>
+                                Não
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+
+
+                      <div id="sucesso5" class="form-group">
+                          <input onclick="atualizar()" type="button" class="btn btn-fill btn-primary mb-2" name="atualizar" value="Atualizar Cadastro">
+                        </div>
+                </div>
+            </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</footer>
+
+    </div>
+  </div>
+
+
+
+
+  <!-- JS FILES -->
+  <script src="https://app.leadmark.com.br/public/themes/now/js/core/jquery.min.js"></script>
+  <script src="https://app.leadmark.com.br/public/themes/now/js/core/popper.min.js"></script>
+  <script src="https://app.leadmark.com.br/public/themes/now/js/core/bootstrap.min.js"></script>
+  <script src="https://app.leadmark.com.br/public/themes/now/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+  <script src="https://app.leadmark.com.br/public/themes/now/js/plugins/moment.min.js"></script>
+  <script src="https://app.leadmark.com.br/public/themes/now/js/plugins/bootstrap-switch.js"></script>
+  <script src="https://app.leadmark.com.br/public/themes/now/js/plugins/sweetalert2.min.js"></script>
+  <script src="https://app.leadmark.com.br/public/themes/now/js/plugins/jquery.validate.min.js"></script>
+  <script src="https://app.leadmark.com.br/public/themes/now/js/plugins/jquery.bootstrap-wizard.js"></script>
+  <script src="https://app.leadmark.com.br/public/themes/now/js/plugins/bootstrap-selectpicker.js"></script>
+  <script src="https://app.leadmark.com.br/public/themes/now/js/plugins/bootstrap-datetimepicker.js"></script>
+  <script src="https://app.leadmark.com.br/public/themes/now/js/plugins/jquery.dataTables.min.js"></script>
+  <script src="https://app.leadmark.com.br/public/themes/now/js/plugins/bootstrap-tagsinput.js"></script>
+  <script src="https://app.leadmark.com.br/public/themes/now/js/plugins/jasny-bootstrap.min.js"></script>
+  <script src="https://app.leadmark.com.br/public/themes/now/js/plugins/fullcalendar.min.js"></script>
+
+
+  <script src="https://app.leadmark.com.br/public/themes/now/js/plugins/chartjs.min.js"></script>
+  <script src="https://app.leadmark.com.br/public/themes/now/js/plugins/bootstrap-notify.js"></script>
+  <script src="https://app.leadmark.com.br/public/themes/now/js/now-ui-dashboard.min.js?v=1.1.2" type="text/javascript"></script>
+  <script src="https://app.leadmark.com.br/public/themes/now/js/custom.js" type="text/javascript"></script>
+  <!-- DEMO -->
+  <script src="https://app.leadmark.com.br/public/themes/now/demo/demo.js"></script>
+
+
+
+
+
+  <script>
+
+offset = 1;
+total_paginas = 0;
+
+var tipos         = [];
+var segmento      = [];
+var operadoras    = [];
+var dddFiltro     = [];
+var tipo          = [];
+// Busca o filtro ativo
+var id_filtro     =                       null;
+                    var salvar_filtro = false;
+
+
+/*ambiente de teste com id do adm*/
+var id = 2;
+
+if (id == 1) {
+    $('.premium').removeClass("d-none");
+	$('#lead-teste').removeClass("d-none");
+    //$('#criarlead').modal('show');
+}
+
+if (id == 4) {
+	$('#lead-teste').removeClass("d-none");
+}
+
+
+$(function(){
+    $("#txtBusca").keyup(function(){
+        var texto = $(this).val();
+
+        $("#filtro_ddd li").css("display", "block");
+        $("#filtro_ddd .ddd-filtro").each(function(){
+          var a = $(this).text().toUpperCase().indexOf(texto.toUpperCase());
+          if(a < 0)
+             $(this).parent().parent().css("display", "none");
+          });
+    });
+});
+
+$(function(){
+    $("#txtBuscaop").keyup(function(){
+        var texto = $(this).val();
+
+        $("#filtro_operadora li").css("display", "block");
+        $("#filtro_operadora li").each(function(){
+          var a = $(this).text().toUpperCase().indexOf(texto.toUpperCase());
+          if(a < 0)
+             $(this).css("display", "none");
+          });
+    });
+});
+
+function paginacao(pagina_atual, qtde_paginas) {
+
+
+
+    // limpa a paginacao
+    $("#paginacao").html("");
+
+    if (pagina_atual > 1 && qtde_paginas > 1) {
+        var template_anterior = '<li class="page-item btnAnterior"><a class="page-link link-not-number" href="#">Anterior</a></li>';
+        $("#paginacao").append(template_anterior);
+    }
+
+    for (var i = 1; i <= qtde_paginas; i++) {
+        var classActive = '';
+        if (i == pagina_atual) {
+            classActive = 'active';
+        }
+        // caso tenha ate 3 paginas
+        if (qtde_paginas <= 3) {
+            var template_paginacao = '<li class="page-item ' + classActive + '"><a class="page-link page-link-number" href="#" data-page="' + i + '">' + i + '</a></li>';
+            $("#paginacao").append(template_paginacao);
+        }
+        // no caso de ter mais de 3 paginas
+        else {
+            if (pagina_atual == 1) {
+                pagina_proxima = pagina_atual + 1;
+                pagina_proxima_proxima = pagina_atual + 2;
+                if (i == pagina_atual || i == pagina_proxima || i == pagina_proxima_proxima) {
+                    var template_paginacao = '<li class="page-item ' + classActive + '"><a class="page-link page-link-number" href="#" data-page="' + i + '">' + i + '</a></li>';
+                    $("#paginacao").append(template_paginacao);
+                }
+            } else if (pagina_atual == qtde_paginas) {
+                pagina_anterior = pagina_atual - 1;
+                pagina_anterior_anterior = pagina_atual - 2;
+                if (i == pagina_atual || i == pagina_anterior || i == pagina_anterior_anterior) {
+                    var template_paginacao = '<li class="page-item ' + classActive + '"><a class="page-link page-link-number" href="#" data-page="' + i + '">' + i + '</a></li>';
+                    $("#paginacao").append(template_paginacao);
+                }
+            } else {
+                pagina_anterior = pagina_atual - 1;
+                pagina_proxima = pagina_atual + 1;
+                if (i == pagina_anterior || i == pagina_atual || i == pagina_proxima) {
+                    var template_paginacao = '<li class="page-item ' + classActive + '"><a class="page-link page-link-number" href="#" data-page="' + i + '">' + i + '</a></li>';
+                    $("#paginacao").append(template_paginacao);
+                }
+            }
+        }
+    }
+    if (pagina_atual != qtde_paginas) {
+        var template_proximo = '<li class="page-item btnProximo"><a class="page-link link-not-number" href="#">Próximo</a></li>';
+        $("#paginacao").append(template_proximo);
+    }
+} // fim paginacao
+
+/*fim ambiente de teste com id do adm*/
+
+
+
+// Variaveis globais
+var CSRF_TOKEN = 'gJn9fHfNBrGRpLcGVU0hcRlyJi5rurKGHM0Mi34U';
+var saldo = 52.2;
+var offset = 1;
+var scroll = true;
+
+
+$(document).on("click", "#carregarleads", function() {
+    offset++;
+    carregarLeads(offset, 0);
+});
+
+// Simple function to calculate time difference between 2 Javascript date objects
+function get_time_difference(earlierDate, laterDate) {
+    var nTotalDiff = laterDate.getTime() - earlierDate.getTime();
+    var oDiff = new Object();
+
+    oDiff.days = Math.floor(nTotalDiff / 1000 / 60 / 60 / 24);
+    nTotalDiff -= oDiff.days * 1000 * 60 * 60 * 24;
+
+    oDiff.hours = Math.floor(nTotalDiff / 1000 / 60 / 60);
+    nTotalDiff -= oDiff.hours * 1000 * 60 * 60;
+
+    oDiff.minutes = Math.floor(nTotalDiff / 1000 / 60);
+    nTotalDiff -= oDiff.minutes * 1000 * 60;
+
+    oDiff.seconds = Math.floor(nTotalDiff / 1000);
+
+    return oDiff;
+
+}
+
+// c = current date
+// l = lead date
+// onde (1,2,3,4,5,6) sao(ano,mes,dia,hora,minuto,segundo)
+function tempoDiferenca(c1, c2, c3, c4, c5, c6, l1, l2, l3, l4, l5, l6) {
+    dateWhenIndiaWonFirstCricketWorldCup = new Date(l1, l2, l3, l4, l5, l6);
+    dateCurrent = new Date(c1, c2, c3, c4, c5, c6);
+    oDiff = get_time_difference(dateWhenIndiaWonFirstCricketWorldCup, dateCurrent);
+    // console.log("Diferenca " + oDiff.days + " dias");
+    // console.log("Diferenca " + oDiff.hours + " hours");
+    // console.log("Diferenca " + oDiff.minutes + " minutes");
+    // console.log("Diferenca " + oDiff.seconds + " seconds");
+    var data_descricao = "";
+    if (oDiff.days == 0) {
+        if (oDiff.hours == 0) {
+            if (oDiff.minutes == 0) {
+                data_descricao = '1 min.';
+            } else {
+                data_descricao = oDiff.minutes + ' min.';
+            }
+        } else if (oDiff.hours == 1) {
+            data_descricao = 'Há ' + oDiff.hours + ' h';
+        } else {
+            data_descricao = 'Há ' + oDiff.hours + ' hs';
+        }
+    } else if (oDiff.days == 1) {
+        data_descricao = '+ de um dia';
+    } else {
+        data_descricao = 'Há + de um dia';
+    }
+    return data_descricao;
+}
+
+
+
+//$('#myModalFilter').modal('show');
+
+
+// Botao Refresh
+function recarregarLeads() {
+  carregarLeads(1, 1);
+}
+
+$("#filtro").click(function() {
+  $("#container_filtro").toggleClass('d-none d-block');
+});
+// Carrega todas as leads do leilao
+
+function carregarLeads(offset, limparTabela){
+    console.log('aa')
+}
+
+
+$(document).ready(function($) {
+
+
+
+// var ts_x;
+// var ts_y;
+// document.addEventListener('touchstart', function(e) {
+//    e.preventDefault();
+//    var touch = e.changedTouches[0];
+//    ts_x = touch.pageX;
+//    ts_y = touch.pageY;
+// }, false);
+
+// document.addEventListener('touchmove', function(e) {
+//    e.preventDefault();
+//    var touch = e.changedTouches[0];
+//    td_x = touch.pageX - ts_x; // deslocamento na horizontal
+//    td_y = touch.pageY - ts_y; // deslocamento na vertical
+//    // O movimento principal foi vertical ou horizontal?
+//    if( Math.max( Math.abs( td_x ), Math.abs( td_y ) ) > 0 ) {
+//       // é horizontal
+//       if( td_x < 100 ) {
+//          console.log('esquerda'); // é para esquerda
+//          $("#container_filtro").removeClass('container_filtro_open');
+
+//       } else {
+//           console.log('direita');// direita
+//           $("#container_filtro").addClass('container_filtro_open');
+//       }
+//    } else {
+//       // é vertical
+//       if( td_y < 0 ) {
+//          // cima
+//       } else {
+//          // baixo
+//       }
+//    }
+// }, false);
+
+
+
+
+
+
+// $(".sidebar-wrapper").on('touchmove', function(e){
+//       e.preventDefault();
+//       var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
+//       var elm = $(this).offset();
+//       var x = touch.pageX - elm.left;
+//       var y = touch.pageY - elm.top;
+
+//       if( Math.max( Math.abs( x ), Math.abs( y ) ) > 50 ) {
+//       // é horizontal
+//       if( x < 0 ) {
+//         $("#bodyClick").click();
+
+//       } else {
+
+//       }
+//       }
+
+// });
+
+
+  // VERIFICA SE EXISTE ALGUMA CAMPANHA (SO EXIBE APENAS UMA VEZ POR USUARIO)
+
+  // gtag_report_conversion();
+  // Faz o primeiro carregamento de Leads
+  carregarLeads(offset, 0);
+
+    // Clique compra Lead
+    $(document).on('click', '.comprarLead', function(e) {
+        e.preventDefault();
+
+        var $this = $(this);
+        var id = $this.data('id');
+        var token = $this.data('token');
+        var valorLead = $this.data('valor');
+        var valorLeadReal = $this.data('valorreal');
+        var produto = $this.data('produto');
+
+        // Usuario tem saldo para comprar
+        if (saldo >= valorLead) {
+
+            swal({
+                title: '<i class="fas fa-shopping-cart"></i> ' + produto + ' - R$ ' + valorLeadReal,
+                text: "Deseja comprar essa Lead?",
+                type: "question",
+                showCancelButton: true,
+                confirmButtonColor: '#18ce0f',
+                confirmButtonText: 'Sim, quero comprar!',
+                cancelButtonText: "Não"
+            }).then(
+                function() {
+                    $.ajax({
+                        url: "https://app.leadmark.com.br" + '/painel/comprarlead',
+                        type: 'POST',
+                        data: {
+                            _token: CSRF_TOKEN,
+                            id: id
+                        },
+                        dataType: 'JSON',
+                        success: function(data) {
+                            if (data.status == "ok") {
+                                swal({
+                                    title: 'Lead comprada com  sucesso!',
+                                    text: 'Veja suas Leads no menu "Minhas Leads"',
+                                    confirmButtonColor: '#18ce0f',
+                                    confirmButtonText: 'Continuar comprando...',
+                                    type: 'success'
+                                }).then(
+                                    function() {
+                                        carregarLeads(offset, 0);
+                                    });
+                            } else {
+                                swal(
+                                    'Ops, algo deu errado!!',
+                                    'Tente comprar novamente...',
+                                    'error'
+                                );
+                            }
+                        }
+                    });
+                },
+                function() {
+                    return false;
+                }
+            );
+        }
+        // Quando o usuario nao tiver saldo suficiente
+        else {
+            swal({
+                title: '<i class="fas fa-shopping-cart"></i> ' + produto + ' - R$ ' + valorLeadReal,
+                text: "Saldo insuficiente! Deseja adicionar crédito para comprar leads?",
+                type: 'error',
+                showCancelButton: true,
+                confirmButtonColor: '#12866f',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Sim, quero adicionar crédito!',
+                cancelButtonText: 'Não'
+            }).then(
+                function(result) {
+                    window.location.href = "https://app.leadmark.com.br/painel/creditar";
+                },
+                function() {
+                    return false;
+                }
+            );
+        }
+
+
+    });
+    // Fim clique compra Lead
+
+
+    // Filtro
+    $("#veja_mais_op").on("click", function() {
+        $(".botaoop").toggleClass('veja_mais_op veja_mais_op_open');
+    });
+
+    $("#veja_mais_ddd").on("click", function() {
+        $(".botaoddd").toggleClass('veja_mais_ddd veja_mais_ddd_open');
+    });
+
+    $(".nav-toggler").on("click", function() {
+        $("#container_filtro").toggleClass("container_filtro_open", 500);
+    });
+
+
+    // Clique itens paginacao
+    $(document).on('click', '.page-link-number', function(e) {
+        e.preventDefault();
+        $("html, body").animate({
+            scrollTop: 0
+        }, 0);
+        $("#container-paginacao").addClass('d-none');
+        var pagina_atual = $(this).data('page');
+        paginacao(pagina_atual, total_paginas);
+        offset = pagina_atual;
+        carregarLeads(offset, 1);
+        return false;
+    }); // fim page-link
+
+
+    // Clique btnAnterior
+    $(document).on('click', '.btnAnterior', function(e) {
+        e.preventDefault();
+        $("html, body").animate({
+            scrollTop: 0
+        }, 0);
+        $("#container-paginacao").addClass('d-none');
+        var pagina_atual = $('.active').first().find('.page-link-number').data('page') - 1;
+        if (pagina_atual >= 1) {
+            paginacao(pagina_atual, total_paginas);
+            offset = pagina_atual;
+            carregarLeads(offset, 1);
+        }
+        return false;
+    }); // fim btnAnterior
+
+
+    // Clique btnProximo
+    $(document).on('click', '.btnProximo', function(e) {
+        e.preventDefault();
+        $("html, body").animate({
+            scrollTop: 0
+        }, 0);
+        $("#container-paginacao").addClass('d-none');
+        var pagina_atual = $('.active').first().find('.page-link-number').data('page') + 1;
+        var qtde_paginas = $(".page-link-number").length;
+        if (pagina_atual) {
+            paginacao(pagina_atual, total_paginas);
+            offset = pagina_atual;
+            carregarLeads(offset, 1);
+        }
+        return false;
+    }); // fim btnProximo
+
+
+    // Clique Botao filtro Segmento
+    $(document).on('click', '.btn-filtro-seg', function(e) {
+        e.preventDefault();
+        var id = parseInt($(this).data('idseg'));
+
+        if( id_filtro == null || id_filtro == ""  ) {
+          if (segmento.includes(id)) {
+            var idx = segmento.indexOf(id);
+            segmento.splice(idx, 1);
+          } else {
+            segmento.push(id);
+          }
+        } else {
+          segmento.push(id);
+        }
+
+        if( $(this).hasClass('active') ) {
+          $(this).removeClass('active btn btn-primary btn-sm');
+            // if (segmento.includes(id)) {
+            //   var idx = segmento.indexOf(id);
+            //   segmento.splice(idx, 1);
+            // }
+        } else {
+          $(this).addClass('active btn btn-primary btn-sm');
+            // if (!segmento.includes(id)) {
+            //   segmento.push(id);
+            // }
+        }
+        var limparTabela = 1;
+        offset = 1;
+        carregarLeads(offset, 1);
+        return false;
+      });
+      // fim Clique Botao btn-filtro-seg
+
+
+      // Clique Botoes Filtro Operadoras
+      $(document).on('click', '.btn-filtro-op', function(e) {
+        e.preventDefault();
+        var id = parseInt($(this).data('idop'));
+
+        operadoras.push(id);
+
+        if ($(this).hasClass('active')) {
+            $(this).removeClass('active btn btn-primary btn-sm');
+            // if (operadoras.includes(id)) {
+            //   var idx = operadoras.indexOf(id);
+            //   operadoras.splice(idx, 1);
+            // }
+        } else {
+            $(this).addClass('active btn btn-primary btn-sm');
+            // Verifica se existe configuracoes do menu
+            // var menu_local = JSON.parse( localStorage.getItem("menuFiltro") );
+            // if (!operadoras.includes(id)) {
+            //   operadoras.push(id);
+            // }
+        }
+        var limparTabela = 1;
+        offset = 1;
+        carregarLeads(offset, 1);
+        return false;
+      });
+      // Fim Clique btn-filtro-op
+
+
+      $(document).on('click', '.btn-filtro-tipo', function(e) {
+        e.preventDefault();
+        var id = parseInt($(this).data('idtipo'));
+
+        // tipo.push(id);
+        if( id_filtro == null || id_filtro == ""  ) {
+          if (tipo.includes(id)) {
+            var idx = tipo.indexOf(id);
+            tipo.splice(idx, 1);
+          } else {
+            tipo.push(id);
+          }
+        } else {
+          tipo.push(id);
+        }
+
+
+        if ($(this).hasClass('active')) {
+            $(this).removeClass('active btn btn-primary btn-sm');
+            // verifica se nao existe no LocalStorage
+            // if ( tipo.includes(id) ) {
+            //   var idx = tipo.indexOf(id);
+            //   tipo.splice(idx, 1);
+            // }
+        } else {
+            $(this).addClass('active btn btn-primary btn-sm');
+            // if (!tipo.includes(id)) {
+            //   tipo.push(id);
+            // }
+        }
+        var limparTabela = 1;
+        offset = 1;
+        carregarLeads(offset, 1);
+        return false;
+      });
+      // fim btn btn-filtro-tipo
+
+
+
+      $(document).on('click', '.btn-filtro-vazio', function(e) {
+        //var ind = $(this).data('ind');
+          e.preventDefault();
+          var id = parseInt($(this).data('idddd'));
+
+          if( id_filtro == null || id_filtro == ""  ) {
+            if (dddFiltro.includes(id)) {
+              var idx = dddFiltro.indexOf(id);
+              dddFiltro.splice(idx, 1);
+            } else {
+              dddFiltro.push(id);
+            }
+          } else {
+            dddFiltro.push(id);
+          }
+
+          if ($(this).hasClass('active')) {
+              $(this).removeClass('active btn btn-primary btn-sm');
+              // verifica se nao existe no LocalStorage
+              // if (dddFiltro.includes(id)) {
+              //   var idx = dddFiltro.indexOf(id);
+              //   dddFiltro.splice(idx, 1);
+              // }
+          } else {
+            $(this).addClass('active btn btn-primary btn-sm');
+            // verifica se nao existe no LocalStorage
+            // if (!dddFiltro.includes(id)) {
+            //   dddFiltro.push(id);
+            // }
+          }
+          var limparTabela = 1;
+          offset = 1;
+          carregarLeads(offset, 1);
+          return false;
+      });
+
+      $(document).on('click', '.btn-filtro-ddd', function(e) {
+          e.preventDefault();
+          var id = parseInt($(this).data('idddd'));
+
+          if( id_filtro == null || id_filtro == ""  ) {
+            if (dddFiltro.includes(id)) {
+              var idx = dddFiltro.indexOf(id);
+              dddFiltro.splice(idx, 1);
+            } else {
+              dddFiltro.push(id);
+            }
+          } else {
+            dddFiltro.push(id);
+          }
+
+          if ($(this).hasClass('active')) {
+              $(this).removeClass('active btn btn-primary btn-sm');
+              // verifica se nao existe no LocalStorage
+              // if (dddFiltro.includes(id)) {
+              //   var idx = dddFiltro.indexOf(id);
+              //   dddFiltro.splice(idx, 1);
+              // }
+          } else {
+              $(this).addClass('active btn btn-primary btn-sm');
+              // verifica se nao existe no LocalStorage
+              // if (!dddFiltro.includes(id)) {
+              //   dddFiltro.push(id);
+              // }
+          }
+          var limparTabela = 1;
+          offset = 1;
+          carregarLeads(offset, 1);
+          return false;
+      });
+      // fim btn btn-filtro-ddd
+
+
+      $(".limpar-filtros").click(function(e) {
+        e.preventDefault();
+
+          id_filtro   = null;
+          segmento    = [];
+          operadoras  = [];
+          dddFiltro   = [];
+          tipo        = [];
+
+          carregarLeads(1, 1);
+          return false;
+      });
+      // limpar-filtros
+
+      $(document).on('change', '.select-meus-filtros', function(e) {
+        id_filtro = $(this).val();
+        carregarLeads(1, 1);
+        return false;
+      });
+
+
+      $(document).on('click', '.btn-filtrando-por', function(e) {
+        e.preventDefault();
+
+        var campo = $(this).data('campo');
+        var id    = parseInt($(this).data('id'));
+
+        if ( campo == 'segmento' ) {
+          if ( (id_filtro == null || id_filtro == "") && segmento.includes(id) ) {
+            var idx = segmento.indexOf(id);
+            segmento.splice(idx, 1);
+            $(this).parent().remove();
+          } else {
+            segmento.push(id);
+          }
+        }
+        if ( campo == 'operadoras' ) {
+          if ( (id_filtro == null || id_filtro == "") &&  operadoras.includes(id) ) {
+            var idx = operadoras.indexOf(id);
+            operadoras.splice(idx, 1);
+            $(this).parent().remove();
+          } else {
+            operadoras.push(id);
+          }
+        }
+        if ( campo == 'tipo' ) {
+          if ( (id_filtro == null || id_filtro == "") &&   tipo.includes(id) ) {
+            var idx = tipo.indexOf(id);
+            tipo.splice(idx, 1);
+            $(this).parent().remove();
+          } else {
+            tipo.push(id);
+          }
+        }
+        if ( campo == 'dddFiltro' ) {
+          if ( (id_filtro == null || id_filtro == "") &&   dddFiltro.includes(id) ) {
+            var idx = dddFiltro.indexOf(id);
+            dddFiltro.splice(idx, 1);
+            $(this).parent().remove();
+          } else {
+            dddFiltro.push(id);
+          }
+        }
+
+        $(this).parent().remove();
+        carregarLeads(1, 1);
+        return false;
+      });
+      // fim btn-filtrando-por
+
+      $("#salvar-filtro").click(function(){
+        swal({
+            title: "Salvar filtro?",
+            text: "Digite uma breve descrição para seu o filtro:",
+            input: 'text',
+            inputAttributes: {
+              maxlength: 20
+            },
+            showCancelButton: true
+        }).then(
+            function(result) {
+              if (result) {
+                $.ajax({
+                  url: 'https://app.leadmark.com.br/painel/filtro/criar',
+                  type: 'POST',
+                  data: {
+                    _token:     CSRF_TOKEN,
+                    descricao:  result,
+                    segmentos:  segmento,
+                    produtos:   operadoras,
+                    ddds:       dddFiltro,
+                    tipos:      tipo
+                  },
+                  dataType: 'JSON',
+                  success: function (data) {
+                    if ( data.status == "success" ) {
+                      segmento    = [];
+                      operadoras  = [];
+                      dddFiltro   = [];
+                      tipo        = [];
+                      id_filtro = data.id_filtro;
+                      offset = 1;
+                      carregarLeads(offset, 1);
+                      swal({
+                        type: "success",
+                        title: "Filtro criado!",
+                        text: "Um novo filtro foi criado com sucesso.",
+                        confirmButtonColor: '#12866f'
+                      }).then(
+                        function() {
+                          return false;
+                        }
+                      );
+                    } else {
+                      swal({
+                        type: "error",
+                        title: "Ops, algo deu errado!",
+                        text: "Erro ao salvar seu filtro.",
+                        confirmButtonColor: '#12866f'
+                      }).then(
+                        function() {
+                          return false;
+                        }
+                      );
+                    }
+                  }
+                });
+                return false;
+                //
+              }
+            },
+            function(){
+              return false;
+            }
+        );
+
+
+      }); // fim btn salvar-filtro
+
+
+      $(document).on('click', '.deletar-filtro', function(e) {
+        var filtro_marcado = $(".select-meus-filtros").val();
+        swal({
+          title: "Remover filtro?",
+          text: "Você tem certeza que deseja remover o filtro atual?",
+          type: "error",
+          showCancelButton: true,
+          confirmButtonColor: '#FF3636',
+          confirmButtonText: 'Sim, quero remover!',
+          cancelButtonText: "Não"
+        }).then(
+          function () {
+            $.ajax({
+              url: 'https://app.leadmark.com.br/painel/filtro/delete',
+              type: 'POST',
+              data: {
+                _token: CSRF_TOKEN,
+                id_filtro: filtro_marcado
+              },
+              dataType: 'JSON',
+              success: function (data) {
+                if ( data.status == "success" ) {
+                  id_filtro = null;
+                  carregarLeads(offset, 1);
+                  swal({
+                    type: "success",
+                    title: "Filtro removido!",
+                    text: "O filtro foi removido com sucesso.",
+                    confirmButtonColor: '#12866f'
+                  }).then(
+                    function() {
+                      return false;
+                    }
+                  );
+                } else {
+                  swal({
+                    type: "error",
+                    title: "Ops, algo deu errado!",
+                    text: "Erro ao remover filtro.",
+                    confirmButtonColor: '#12866f'
+                  }).then(
+                    function(result) {
+                      console.log('error');
+                    }
+                  );
+                }
+              }
+            });
+            return false;
+          },
+          function () {
+            return false;
+          }
+        );
+      }); // fim btn delete-filtro
+
+
+
+      // btn Desativar notificacoes
+      $(document).on('click', '.desativar-noticicao', function(e) {
+        var filtro_marcado = $(".select-meus-filtros").val();
+        swal({
+          title: "Desativar notificações?",
+          text: "Você tem certeza que deseja desativar as notificações?",
+          type: "question",
+          showCancelButton: true,
+          confirmButtonColor: '#FFB236',
+          confirmButtonText: 'Sim, quero desativar!',
+          cancelButtonText: "Não"
+        }).then(
+          function () {
+            $.ajax({
+              url: 'https://app.leadmark.com.br/painel/filtro/noticicacao',
+              type: 'POST',
+              data: {
+                _token: CSRF_TOKEN,
+                id_filtro: filtro_marcado
+              },
+              dataType: 'JSON',
+              success: function (data) {
+                if ( data.status.notificacao == 0 ) {
+                  $("#desativar-noticicao").addClass('d-none');
+                  $("#ativar-noticicao").removeClass('d-none');
+                  swal({
+                    type: "success",
+                    title: "Notificações desativadas!",
+                    text: "As notificações foram desativadas para este filtro",
+                    confirmButtonColor: '#12866f'
+                  });
+                }
+              }
+            });
+            return false;
+          },
+          function () {
+            return false;
+          }
+        );
+      });
+      // fim btn Desativar notificacoes
+
+      // btn ATIVAR notificacoes
+      $(document).on('click', '.ativar-noticicao', function(e) {
+          var filtro_marcado = $(".select-meus-filtros").val();
+          $.ajax({
+            url: 'https://app.leadmark.com.br/painel/filtro/noticicacao',
+            type: 'POST',
+            data: {
+              _token: CSRF_TOKEN,
+              id_filtro: filtro_marcado
+            },
+            dataType: 'JSON',
+            success: function (data) {
+              if ( data.status.notificacao == 1 ) {
+                $("#desativar-noticicao").removeClass('d-none');
+                $("#ativar-noticicao").addClass('d-none');
+                swal({
+                  type: "success",
+                  title: "Notificações ativas!",
+                  text: "Fique atento, você receberá notificações de acordo com o seu filtro sempre que novas Leads chegaram.",
+                  confirmButtonColor: '#12866f'
+                });
+              }
+            }
+          });
+          return false;
+      });
+      // fim btn ATIVAR notificacoes
+
+
+});
+// fim documento ready
+</script>
+
+
+
+
+
+<script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+<script type="text/javascript" src="https://app.leadmark.com.br/public/scripts/main.js"></script>
+<script>
+  var id_user_logado = 2;
+</script>
+
+
+
+
+
+<script>
+    /*var nomeUser = 'Leandro Tavares';
+	nomeUsers = nomeUser.split(' ');
+	var nomeU = nomeUsers[0]+' '+nomeUsers[1];
+
+	if(nomeUsers[0] != ''){
+		$('#nomeUser').append(nomeUsers[0]);
+	}
+	if(nomeUsers[1] != ''){
+		$('#nomeUser').append(' '+nomeUsers[1]);
+	}else{
+		$('#nomeUser').append('');
+	}*/
+
+
+
+</script>
+
+
+<script src="https://app.leadmark.com.br/public/themes/now/js/plugins/jquery.mask.min.js"></script>
+<script>
+ /// Mascara telefone
+ var SPMaskBehavior = function (val) {
+    return val.replace(/\D/g, '').length === 11 ? '(00) 00000-0000' : '(00) 0000-00009';
+  },
+  spOptions = {
+    onKeyPress: function(val, e, field, options) {
+      field.mask(SPMaskBehavior.apply({}, arguments), options);
+    },
+    clearIfNotMatch: true
+  };
+
+  $(document).ready(function($) {
+    // Mascaras
+    $('.sp_celphones').mask(SPMaskBehavior, spOptions);
+  });
+
+
+
+
+  //$("#Modaltelefone").modal('show');
+var telefone_user_logado = "(85) 98915-0645";
+if(telefone_user_logado == ''){
+$("#Modaltelefone").modal('show');
+}
+
+var wpp = '';
+$('input[name=whatsapp]').on('change', function() {
+  wpp = this.value;
+});
+
+function atualizar(){
+  if(wpp == ""){
+    alert("Por favor, informe se você tem ou não whatsapp!") ;
+$('input[name=whatsapp]').focus();
+return false;
+}
+
+  var telefone = $("#telefone").val();
+if(telefone == ''){
+  alert("Coloque um telefone válido");
+  return false;
+}
+var CSRF_TOKEN_FOOTER = 'gJn9fHfNBrGRpLcGVU0hcRlyJi5rurKGHM0Mi34U';
+$.ajax({
+    url: "https://app.leadmark.com.br/painel/atualizatelefone",
+   type: 'POST',
+   data: {
+     telefone : telefone,
+     whatsapp : wpp,
+    _token: 		CSRF_TOKEN_FOOTER
+  },
+   success: function (data) {
+        console.log(data);
+        $("#sucesso5").addClass("d-none");
+        $("#sucesso4").addClass("d-none");
+        $("#sucesso3").addClass("d-none");
+        $("#sucesso2").addClass("d-none");
+        $("#sucesso").removeClass("d-none");
+        $("#sucesso6").removeClass("d-none");
+    },
+   error: function (error) {
+        alert(error);
+        console.log(error);
+
+    }
+});
+
+}
+
+
+
+</script>
+
+	<script src="https://app.leadmark.com.br/public/themes/now/js/plugins/jquery.hideseek.min.js"></script>
+
+	<script>
+
+
+   $('#Modalnotificação').on('hide.bs.modal', function () {
+    	window.location.assign("https://app.leadmark.com.br/painel")
+	});
+
+	var notificacao = '';
+	var msg = '';
+	var titulo = '';
+
+
+	var icone = '<h1 class="text-center"><i class="fas fa-exclamation"></i></h1>';
+
+
+
+	$("#msg").html(msg);
+	$("#titulo").html(titulo);
+	$("#icone").html(icone);
+
+
+
+	if(notificacao == 1){
+		$("#Modalnotificação").modal('show');
+	}
+		var url = "https://app.leadmark.com.br/painel/menus";
+
+    $.ajax({
+      type: 'GET',
+      contentType: "application/json",
+      dataType: "json",
+      url: url
+    })
+    .done(function(data) {
+		//console.log(data);
+		data.menus.forEach( function(m, index) {
+
+			 $(".list").append('<p><a href="https://app.leadmark.com.br'+m.url+'">'+m.nome+'</a></p>');
+
+
+		});
+		$('#search').hideseek({
+     nodata: 'Nenhum curso encontrado',
+     highlight: true,
+     hidden_mode: true
+    });
+	});Carregando
+
+
+$(document).ready(function() {
+
+
+
+
+
+});
+
+
+    </script>
+
+</body>
+</html>
