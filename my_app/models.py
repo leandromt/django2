@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 
 
 class Categoria(models.Model):
+
     title = models.CharField(max_length=255, verbose_name='Título')
 
     class Meta:

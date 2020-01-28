@@ -973,35 +973,8 @@ function gtag_report_conversion(url) {
 
       <span class="d-block d-md-none text-center mx-auto p mb-1"><span class="resultados-encontrados-mob"></span> Leads</span>
         	<div id="listaLeads" class="col-lg-8 col-md-12 col-sm-12 col-12 px-2">
-
-                <!-- ITEM LEAD -->
-                <a href="https://app.leadmark.com.br/painel/lead/' + i.id + '"><div class=" card mb-2">'
-                    <div class="card-body px-md-2">
-                        <div class="row py-md-2 px-md-1 px-2 campo-lead">
-                          <div class="col-md-3 col-5 py-md-2 my-auto item-leads img-leads py-1">
-                              <div class="etq-destaque etq-premium"></div>
-                              <img class="img img-raised" src="https://app.leadmark.com.br/public/themes/now/img/operadoras/1.png">
-                          </div>
-                          <div class="col-md-5 col-7 mh-100">
-                              <p style="font-size:18px;" class="mb-0 mt-2">Individual</p>
-                              <p class="mb-0 d-md-block d-block mt-md-0" style="font-size: 13px;font-weight:100; color:#444; text-decoration:line-through;">R$ 23,00</p>
-                              <p class="mb-0 d-md-block d-block" style="font-size: 17px;font-weight:600; color:#12B160;">R$ 20,00<span class="d-block d-md-none float-right mt-1" style="font-size:12px; color:#444;font-weight:400;"><i class="now-ui-icons ui-2_time-alarm"></i> 25</span></p>
-                              <p class="mb-0 mt-2" style="color:#444; font-size:12px; position:absolute; bottom:5px;">
-                                <i class="far fa-heart"></i>
-                                <i class="far fa-file-alt"></i>
-                                <br><span class="" style="font-size:10px; color:#444">DDD 85 Fortaleza</span>
-                              </p>
-                          </div>
-                          <div class="col-md-4 col-4 text-center d-none d-md-block pr-md-2">
-                              <p class="d-md-none" style="font-size: 17px;font-weight:600;">R$ 18,00</p>
-                              <small class="d-none d-md-block mt-2"><i class="now-ui-icons ui-2_time-alarm"></i> 8 horas</small>
-                              <span class="mt-2 btn btn-primary d-none d-md-block mt-4 mb-0 pr-md-4" style="background: transparent;color: #f78323;border: solid 2px;border-radius: 30px;bottom: 0px;position: absolute;padding: 10px 10px;"><i class="far fa-lg fa-comment"></i> Comprar agora</span>
-                          </div>
-                        </div>
-                      </div>
-                  </div>
-                </a>
-                <!-- ITEM LEAD -->
+                {% block content %}
+                {% endblock %}
           </div>
         </div>
     </div>

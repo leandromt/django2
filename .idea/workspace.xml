@@ -2,11 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="30467ef2-1df3-477e-84ce-9cd6b1c8980e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/leads.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/leads/template.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/django2/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/django2/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django2/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/django2/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leads/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/leads/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leads/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leads/migrations/0002_lead_vidas.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/leads/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/leads/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/leads/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/leads/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_app/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_app/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/leads.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/leads/leads.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,10 +43,11 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="ignore.virus.scanning.warn.message" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../pyshop" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\www\django2\templates\leads" />
       <recent name="D:\www\django2\templates" />
     </key>
   </component>
@@ -73,9 +81,9 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="442" y="173" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.738@0.0.1366.738" timestamp="1579472929627" />
-    <state x="463" y="125" key="FileChooserDialogImpl" timestamp="1579567007179">
+    <state x="463" y="125" key="FileChooserDialogImpl" timestamp="1580082750769">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="463" y="125" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1579567007179" />
+    <state x="463" y="125" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1580082750769" />
   </component>
 </project>

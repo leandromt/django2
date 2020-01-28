@@ -15,3 +15,7 @@ from django.http import HttpResponse
 
 def home(request):
     return HttpResponse('Olá Mundo!')
+
+
+def home_para(request):
+    return HttpResponse('Olá Mundo!')
