@@ -1,8 +1,10 @@
 {% extends 'base.html' %}
 {% block content %}
-<h1>{{ post.title }}</h1>
-{% if post.subtitle %}<p>{{ post.subtitle }}</p>{% endif %}
-<p>{{ post.content }}</p>
-<p>{{ post.user.first_name }} {{ post.user.last_name }}</p>
-<a href="javascript:history.back()">voltar</a>
+<div class="container">
+    <h1>{{ post.title }}</h1>
+    {% if post.subtitle %}<p>{{ post.subtitle }}</p>{% endif %}
+    <p>{{ post.content }}</p>
+    <p>{{ post.user.first_name }} {{ post.user.last_name }}</p>
+    <a href="{% url 'post_list' %}">voltar</a>
+</div>
 {% endblock %}

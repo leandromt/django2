@@ -5,12 +5,7 @@
     <p>{{ description }}</p>
     <ul>
         {% for post in posts %}
-            <li>
-                <h1><a href="/posts/{{ post.id }}">{{ post.title }}</a></h1>
-                {% if post.subtitle %}<p>{{ post.subtitle }}</p>{% endif %}
-                <p>{{ post.content }}</p>
-                <p>{{ post.user }}</p>
-            </li>
+            <li><a href="{% url 'post_list' %}/{{ post.id }}">{{ post.title }}</a></li>
         {% endfor %}
     </ul>
 </div>
