@@ -4,9 +4,7 @@
     <list default="true" id="30467ef2-1df3-477e-84ce-9cd6b1c8980e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/django2/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/django2/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/posts/post_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/posts/post_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/posts/post_show.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/posts/post_show.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
