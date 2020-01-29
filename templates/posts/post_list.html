@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <h1>{{ title }}</h1>
+    <p>{{ description }}</p>
+    <ul>
+        {% for post in posts %}
+            <li>
+                <h1><a href="/posts/{{ post.id }}">{{ post.title }}</a></h1>
+                {% if post.subtitle %}<p>{{ post.subtitle }}</p>{% endif %}
+                <p>{{ post.content }}</p>
+                <p>{{ post.user }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
