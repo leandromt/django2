@@ -21,7 +21,7 @@ from leads import views as vl
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', vp.home),
-        path('posts', vp.post_list, name='post_list'),
+    path('posts', vp.post_list, name='post_list'),
     path('posts/<int:post_id>/', vp.post_show, name='post_show'),
     path('leads/', vl.home),
     path('leads/<int:lead_id>/', vl.home_param)

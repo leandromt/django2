@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="30467ef2-1df3-477e-84ce-9cd6b1c8980e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/django2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/django2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/django2/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/django2/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/posts/post_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/posts/post_list.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +34,8 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="ignore.virus.scanning.warn.message" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../pyshop" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -76,5 +77,13 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="463" y="125" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1580082750769" />
+    <state x="141" y="50" key="SettingsEditor" timestamp="1580438323371">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="141" y="50" key="SettingsEditor/0.23.1280.777@0.23.1280.777" timestamp="1580438323371" />
+    <state x="317" y="244" key="com.intellij.ide.util.TipDialog" timestamp="1580438164311">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="317" y="244" key="com.intellij.ide.util.TipDialog/0.23.1280.777@0.23.1280.777" timestamp="1580438164311" />
   </component>
 </project>
